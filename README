@@ -1,0 +1,45 @@
+VS1838B IR Receiver sample source code for Arduino Uno
+Copyright (C) 2014 Hiroshi Takekawa
+
+*** Licensing Term
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License as
+published by the Free Software Foundation; version 2 of the
+License.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+ATTENTION: GPL version 2 only. You cannot apply any later version.
+This situation may change in the future.
+
+
+*** How to prepare
+
+* Hardware
+- You need Arduino Uno (compatible) hardware.
+- Connect Vout of VS1838B to digital pin 8 (configurable) and pull-up by
+  1k ohm resistor.
+- Connect Vcc of VS1838B to 5V and GND of VS1838B to GND.
+
+* Software
+You need the AVR toolchain, which is included in Arduino SDK.
+Set PATH to the toolchain and type 'make' to compile.
+Use avrdude to write the software.
+
+
+*** How to use
+
+Power-on your Arduino Uno and connect to serial console.
+Decoded results are printed out to serial console.
+
+
+*** Contact
+E-mail: Hiroshi Takekawa <sian@big.or.jp>
