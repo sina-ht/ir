@@ -1,4 +1,4 @@
-IR Receiver/Transmitter sample source code for Arduino Uno
+VS1838B IR Receiver sample source code for Arduino Uno
 Copyright (C) 2014 Hiroshi Takekawa
 
 *** Licensing Term
@@ -21,30 +21,24 @@ ATTENTION: GPL version 2 only. You cannot apply any later version.
 This situation may change in the future.
 
 
-*** What's this?
-
-IR Receiver/Transmitter sample source code for Arduino Uno.
-Note that there's no warranty.
-
+*** How to prepare
 
 * Hardware
-
-See hardware/IrLed.pdf
-
+- You need Arduino Uno (compatible) hardware.
+- Connect Vout of VS1838B to digital pin 8 (configurable) and pull-up by
+  1k ohm resistor.
+- Connect Vcc of VS1838B to 5V and GND of VS1838B to GND.
 
 * Software
+You need the AVR toolchain, which is included in Arduino SDK.
+Set PATH to the toolchain and type 'make' to compile.
+Use avrdude to write the software.
 
-- nec-ir
 
-Ir receiver sample for NEC protocol.
+*** How to use
 
-- ir-recv
-
-Ir receiver sample for any protocol.
-
-- ir-send
-
-Ir trasmitter sample for any protocol.
+Power-on your Arduino Uno and connect to serial console.
+Decoded results are printed out to serial console.
 
 
 *** Contact

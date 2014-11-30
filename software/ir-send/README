@@ -1,4 +1,4 @@
-IR Receiver/Transmitter sample source code for Arduino Uno
+IrLED Transmitter sample source code for Arduino Uno
 Copyright (C) 2014 Hiroshi Takekawa
 
 *** Licensing Term
@@ -21,30 +21,26 @@ ATTENTION: GPL version 2 only. You cannot apply any later version.
 This situation may change in the future.
 
 
-*** What's this?
-
-IR Receiver/Transmitter sample source code for Arduino Uno.
-Note that there's no warranty.
-
+*** How to prepare
 
 * Hardware
-
-See hardware/IrLed.pdf
+- You need Arduino Uno (compatible) hardware.
+- Connect the anode of IrLED to digital pin 3 (configurable).
+- Connect the cathode of IrLED to GND.
+- Connect HC-SR04's Trig to 9, Echo to 10.
 
 
 * Software
+You need the AVR toolchain, which is included in Arduino SDK.
+intervals in ir-send.c must be replaced with the ir-recv result.
+Set PATH to the toolchain and type 'make' to compile.
+Use avrdude to write the software.
 
-- nec-ir
 
-Ir receiver sample for NEC protocol.
+*** How to use
 
-- ir-recv
-
-Ir receiver sample for any protocol.
-
-- ir-send
-
-Ir trasmitter sample for any protocol.
+Power-on your Arduino Uno and bring your hand near HC-SR04, then Ir signal
+will be sent.
 
 
 *** Contact
